@@ -1,420 +1,82 @@
-<div class="container">
-
-# Service Center API
-
-Base URL: <span class="sw-info-basePath">/registry/v3</span>, Version: <span class="sw-info-version">3.0.0</span>
-
-<div id="sw-default-produces" class="sw-default-value"><span class="sw-default-value-header">Default response content-types:</span> application/json</div>
-
-<div id="sw-schemes" class="sw-default-value"><span class="sw-default-value-header">Schemes:</span> https</div>
-
 ## Summary
 
 ### Tag: microservices
 
-<table class="table table-bordered table-condensed swagger--summary">
-
-<thead>
-
-<tr>
-
-<th>Operation</th>
-
-<th>Description</th>
-
-</tr>
-
-</thead>
-
-<tbody>
-
-<tr>
-
-<td>[GET /microservices/{serviceId}](#operation--microservices--serviceId--get)</td>
-
-</tr>
-
-<tr>
-
-<td>[DELETE /microservices/{serviceId}](#operation--microservices--serviceId--delete)</td>
-
-</tr>
-
-<tr>
-
-<td>[GET /microservices](#operation--microservices-get)</td>
-
-</tr>
-
-<tr>
-
-<td>[POST /microservices](#operation--microservices-post)</td>
-
-</tr>
-
-<tr>
-
-<td>[PUT /microservices/{serviceId}/properties](#operation--microservices--serviceId--properties-put)</td>
-
-</tr>
-
-<tr>
-
-<td>[POST /microservices/{serviceId}/tags](#operation--microservices--serviceId--tags-post)</td>
-
-</tr>
-
-<tr>
-
-<td>[GET /microservices/{serviceId}/tags](#operation--microservices--serviceId--tags-get)</td>
-
-</tr>
-
-<tr>
-
-<td>[PUT /microservices/{serviceId}/tags/{key}](#operation--microservices--serviceId--tags--key--put)</td>
-
-</tr>
-
-<tr>
-
-<td>[DELETE /microservices/{serviceId}/tags/{key}](#operation--microservices--serviceId--tags--key--delete)</td>
-
-</tr>
-
-<tr>
-
-<td>[POST /microservices/{serviceId}/rules](#operation--microservices--serviceId--rules-post)</td>
-
-</tr>
-
-<tr>
-
-<td>[GET /microservices/{serviceId}/rules](#operation--microservices--serviceId--rules-get)</td>
-
-</tr>
-
-<tr>
-
-<td>[PUT /registry/v3/microservices/{serviceId}/rules/{rule_id}](#operation--registry-v3-microservices--serviceId--rules--rule_id--put)</td>
-
-</tr>
-
-<tr>
-
-<td>[DELETE /registry/v3/microservices/{serviceId}/rules/{rule_id}](#operation--registry-v3-microservices--serviceId--rules--rule_id--delete)</td>
-
-</tr>
-
-<tr>
-
-<td>[GET /microservices/{serviceId}/schemas/{schemaId}](#operation--microservices--serviceId--schemas--schemaId--get)</td>
-
-</tr>
-
-<tr>
-
-<td>[PUT /microservices/{serviceId}/schemas/{schemaId}](#operation--microservices--serviceId--schemas--schemaId--put)</td>
-
-</tr>
-
-<tr>
-
-<td>[DELETE /microservices/{serviceId}/schemas/{schemaId}](#operation--microservices--serviceId--schemas--schemaId--delete)</td>
-
-</tr>
-
-<tr>
-
-<td>[GET /existence](#operation--existence-get)</td>
-
-</tr>
-
-<tr>
-
-<td>[GET /microservices/{serviceId}/watcher](#operation--microservices--serviceId--watcher-get)</td>
-
-</tr>
-
-</tbody>
-
-</table>
+| Operation | Description |
+| --- | --- |
+| [GET /microservices/{serviceId}](#operation--microservices--serviceId--get) |
+| [DELETE /microservices/{serviceId}](#operation--microservices--serviceId--delete) |
+| [GET /microservices](#operation--microservices-get) |
+| [POST /microservices](#operation--microservices-post) |
+| [PUT /microservices/{serviceId}/properties](#operation--microservices--serviceId--properties-put) |
+| [POST /microservices/{serviceId}/tags](#operation--microservices--serviceId--tags-post) |
+| [GET /microservices/{serviceId}/tags](#operation--microservices--serviceId--tags-get) |
+| [PUT /microservices/{serviceId}/tags/{key}](#operation--microservices--serviceId--tags--key--put) |
+| [DELETE /microservices/{serviceId}/tags/{key}](#operation--microservices--serviceId--tags--key--delete) |
+| [POST /microservices/{serviceId}/rules](#operation--microservices--serviceId--rules-post) |
+| [GET /microservices/{serviceId}/rules](#operation--microservices--serviceId--rules-get) |
+| [PUT /registry/v3/microservices/{serviceId}/rules/{rule_id}](#operation--registry-v3-microservices--serviceId--rules--rule_id--put) |
+| [DELETE /registry/v3/microservices/{serviceId}/rules/{rule_id}](#operation--registry-v3-microservices--serviceId--rules--rule_id--delete) |
+| [GET /microservices/{serviceId}/schemas/{schemaId}](#operation--microservices--serviceId--schemas--schemaId--get) |
+| [PUT /microservices/{serviceId}/schemas/{schemaId}](#operation--microservices--serviceId--schemas--schemaId--put) |
+| [DELETE /microservices/{serviceId}/schemas/{schemaId}](#operation--microservices--serviceId--schemas--schemaId--delete) |
+| [GET /existence](#operation--existence-get) |
+| [GET /microservices/{serviceId}/watcher](#operation--microservices--serviceId--watcher-get) |
 
 ### Tag: tag
 
-<table class="table table-bordered table-condensed swagger--summary">
-
-<thead>
-
-<tr>
-
-<th>Operation</th>
-
-<th>Description</th>
-
-</tr>
-
-</thead>
-
-<tbody>
-
-<tr>
-
-<td>[POST /microservices/{serviceId}/tags](#operation--microservices--serviceId--tags-post)</td>
-
-</tr>
-
-<tr>
-
-<td>[GET /microservices/{serviceId}/tags](#operation--microservices--serviceId--tags-get)</td>
-
-</tr>
-
-<tr>
-
-<td>[PUT /microservices/{serviceId}/tags/{key}](#operation--microservices--serviceId--tags--key--put)</td>
-
-</tr>
-
-<tr>
-
-<td>[DELETE /microservices/{serviceId}/tags/{key}](#operation--microservices--serviceId--tags--key--delete)</td>
-
-</tr>
-
-</tbody>
-
-</table>
+| Operation | Description |
+| --- | --- |
+| [POST /microservices/{serviceId}/tags](#operation--microservices--serviceId--tags-post) |
+| [GET /microservices/{serviceId}/tags](#operation--microservices--serviceId--tags-get) |
+| [PUT /microservices/{serviceId}/tags/{key}](#operation--microservices--serviceId--tags--key--put) |
+| [DELETE /microservices/{serviceId}/tags/{key}](#operation--microservices--serviceId--tags--key--delete) |
 
 ### Tag: rule
 
-<table class="table table-bordered table-condensed swagger--summary">
-
-<thead>
-
-<tr>
-
-<th>Operation</th>
-
-<th>Description</th>
-
-</tr>
-
-</thead>
-
-<tbody>
-
-<tr>
-
-<td>[POST /microservices/{serviceId}/rules](#operation--microservices--serviceId--rules-post)</td>
-
-</tr>
-
-<tr>
-
-<td>[GET /microservices/{serviceId}/rules](#operation--microservices--serviceId--rules-get)</td>
-
-</tr>
-
-<tr>
-
-<td>[PUT /registry/v3/microservices/{serviceId}/rules/{rule_id}](#operation--registry-v3-microservices--serviceId--rules--rule_id--put)</td>
-
-</tr>
-
-<tr>
-
-<td>[DELETE /registry/v3/microservices/{serviceId}/rules/{rule_id}](#operation--registry-v3-microservices--serviceId--rules--rule_id--delete)</td>
-
-</tr>
-
-</tbody>
-
-</table>
+| Operation | Description |
+| --- | --- |
+| [POST /microservices/{serviceId}/rules](#operation--microservices--serviceId--rules-post) |
+| [GET /microservices/{serviceId}/rules](#operation--microservices--serviceId--rules-get) |
+| [PUT /registry/v3/microservices/{serviceId}/rules/{rule_id}](#operation--registry-v3-microservices--serviceId--rules--rule_id--put) |
+| [DELETE /registry/v3/microservices/{serviceId}/rules/{rule_id}](#operation--registry-v3-microservices--serviceId--rules--rule_id--delete) |
 
 ### Tag: schema
 
-<table class="table table-bordered table-condensed swagger--summary">
-
-<thead>
-
-<tr>
-
-<th>Operation</th>
-
-<th>Description</th>
-
-</tr>
-
-</thead>
-
-<tbody>
-
-<tr>
-
-<td>[GET /microservices/{serviceId}/schemas/{schemaId}](#operation--microservices--serviceId--schemas--schemaId--get)</td>
-
-</tr>
-
-<tr>
-
-<td>[PUT /microservices/{serviceId}/schemas/{schemaId}](#operation--microservices--serviceId--schemas--schemaId--put)</td>
-
-</tr>
-
-<tr>
-
-<td>[DELETE /microservices/{serviceId}/schemas/{schemaId}](#operation--microservices--serviceId--schemas--schemaId--delete)</td>
-
-</tr>
-
-</tbody>
-
-</table>
+| Operation | Description |
+| --- | --- |
+| [GET /microservices/{serviceId}/schemas/{schemaId}](#operation--microservices--serviceId--schemas--schemaId--get) |
+| [PUT /microservices/{serviceId}/schemas/{schemaId}](#operation--microservices--serviceId--schemas--schemaId--put) |
+| [DELETE /microservices/{serviceId}/schemas/{schemaId}](#operation--microservices--serviceId--schemas--schemaId--delete) |
 
 ### Tag: dependency
 
-<table class="table table-bordered table-condensed swagger--summary">
-
-<thead>
-
-<tr>
-
-<th>Operation</th>
-
-<th>Description</th>
-
-</tr>
-
-</thead>
-
-<tbody>
-
-<tr>
-
-<td>[PUT /dependencies](#operation--dependencies-put)</td>
-
-</tr>
-
-<tr>
-
-<td>[GET /microservices/{consumerId}/providers](#operation--microservices--consumerId--providers-get)</td>
-
-</tr>
-
-<tr>
-
-<td>[GET /microservices/{providerId}/consumers](#operation--microservices--providerId--consumers-get)</td>
-
-</tr>
-
-</tbody>
-
-</table>
+| Operation | Description |
+| --- | --- |
+| [PUT /dependencies](#operation--dependencies-put) |
+| [GET /microservices/{consumerId}/providers](#operation--microservices--consumerId--providers-get) |
+| [GET /microservices/{providerId}/consumers](#operation--microservices--providerId--consumers-get) |
 
 ### Tag: schemas
 
-<table class="table table-bordered table-condensed swagger--summary">
-
-<thead>
-
-<tr>
-
-<th>Operation</th>
-
-<th>Description</th>
-
-</tr>
-
-</thead>
-
-<tbody>
-
-<tr>
-
-<td>[GET /existence](#operation--existence-get)</td>
-
-</tr>
-
-</tbody>
-
-</table>
+| Operation | Description |
+| --- | --- |
+| [GET /existence](#operation--existence-get) |
 
 ### Tag: instances
 
-<table class="table table-bordered table-condensed swagger--summary">
+| Operation | Description |
+| --- | --- |
+| [POST /microservices/{serviceId}/instances](#operation--microservices--serviceId--instances-post) |
+| [GET /microservices/{serviceId}/instances](#operation--microservices--serviceId--instances-get) |
+| [DELETE /microservices/{serviceId}/instances/{instanceId}](#operation--microservices--serviceId--instances--instanceId--delete) |
+| [GET /microservices/{serviceId}/instances/{instanceId}](#operation--microservices--serviceId--instances--instanceId--get) |
+| [PUT /microservices/{serviceId}/instances/{instanceId}/properties](#operation--microservices--serviceId--instances--instanceId--properties-put) |
+| [PUT /microservices/{serviceId}/instances/{instanceId}/status](#operation--microservices--serviceId--instances--instanceId--status-put) |
+| [PUT /microservices/{serviceId}/instances/{instanceId}/heartbeat](#operation--microservices--serviceId--instances--instanceId--heartbeat-put) |
+| [PUT /heartbeats](#operation--heartbeats-put) |
+| [GET /instances](#operation--instances-get) |
 
-<thead>
-
-<tr>
-
-<th>Operation</th>
-
-<th>Description</th>
-
-</tr>
-
-</thead>
-
-<tbody>
-
-<tr>
-
-<td>[POST /microservices/{serviceId}/instances](#operation--microservices--serviceId--instances-post)</td>
-
-</tr>
-
-<tr>
-
-<td>[GET /microservices/{serviceId}/instances](#operation--microservices--serviceId--instances-get)</td>
-
-</tr>
-
-<tr>
-
-<td>[DELETE /microservices/{serviceId}/instances/{instanceId}](#operation--microservices--serviceId--instances--instanceId--delete)</td>
-
-</tr>
-
-<tr>
-
-<td>[GET /microservices/{serviceId}/instances/{instanceId}](#operation--microservices--serviceId--instances--instanceId--get)</td>
-
-</tr>
-
-<tr>
-
-<td>[PUT /microservices/{serviceId}/instances/{instanceId}/properties](#operation--microservices--serviceId--instances--instanceId--properties-put)</td>
-
-</tr>
-
-<tr>
-
-<td>[PUT /microservices/{serviceId}/instances/{instanceId}/status](#operation--microservices--serviceId--instances--instanceId--status-put)</td>
-
-</tr>
-
-<tr>
-
-<td>[PUT /microservices/{serviceId}/instances/{instanceId}/heartbeat](#operation--microservices--serviceId--instances--instanceId--heartbeat-put)</td>
-
-</tr>
-
-<tr>
-
-<td>[PUT /heartbeats](#operation--heartbeats-put)</td>
-
-</tr>
-
-<tr>
-
-<td>[GET /instances](#operation--instances-get)</td>
-
-</tr>
-
-</tbody>
-
-</table>
 
 ## Paths
 
